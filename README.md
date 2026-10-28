@@ -37,3 +37,15 @@ python3 -m http.server 8000
 - 매출 및 가맹 수익 수치는 제공된 자료의 사례·목표치로, 실제 수익을 보장하지 않습니다.
 - 추가 인계본점 집계와 기존 홍보물 매출 수치는 기간·집계 기준이 다를 수 있어 직접 비교하지 않았습니다.
 - 향후 공식 문의 채널, 사업자 정보, 개인정보처리방침 등 운영 정보와 이미지 사용 권한을 확인해 보완해야 합니다.
+
+## Netlify 자동 배포와 문의 접수
+
+1. Netlify의 **Add new project → Import an existing project**에서 GitHub 저장소 `1115sinb-ai/daily-multigym`을 선택합니다.
+2. 브랜치는 `main`, **Build command는 비워두고**, **Publish directory는 `.`**(저장소 루트)로 설정합니다. `netlify.toml`에도 설정되어 있습니다.
+3. Netlify 프로젝트의 **Forms → Enable form detection**을 활성화하고 최신 커밋을 배포합니다.
+4. 사이트의 `#contact` 섹션에 있는 `daily-multigym-inquiry` 폼이 **Forms** 목록에 나타나는지 확인합니다.
+5. **Forms → Submission notifications → Add notification → Email notification**에서 `service@dailymultigym.com`을 수신자로 지정합니다.
+6. 실제 문의를 테스트해서 **Netlify Forms 목록과 Gmail 모두에서 확인**합니다.
+7. Mailplug DNS로 커스텀 도메인을 연결할 때 웹용 A/CNAME만 Netlify 권장값으로 변경하고, **Google Workspace MX/SPF/DKIM/TXT는 유지**합니다.
+
+참고: 문의 폼의 개인정보 안내/보유기간은 운영 전 실제 정책과 맞추고, Netlify 제출 기록 및 알림 이메일도 해당 기간에 맞춰 삭제 관리해야 합니다. Netlify가 아닌 사이트 호스트에서는 Netlify Forms 접수가 작동하지 않습니다.

@@ -33,8 +33,9 @@
           <a href="#franchise">가맹 안내</a>
           <a href="#impact">사회적 가치</a>
           <a href="#gallery">브랜드 자료</a>
+          <a href="#contact">문의하기</a>
         </nav>
-        <a class="nav-cta" href="#franchise"><span>가맹 안내</span><span aria-hidden="true">↗</span></a>
+        <a class="nav-cta" href="#contact"><span>문의하기</span><span aria-hidden="true">↗</span></a>
         <button class="menu-toggle" type="button" aria-controls="mobile-nav" aria-expanded="false" aria-label="메뉴 열기">
           <span></span><span></span><span></span>
         </button>
@@ -46,7 +47,8 @@
         <a href="#franchise">가맹 안내 <span>05</span></a>
         <a href="#impact">사회적 가치 <span>07</span></a>
         <a href="#gallery">브랜드 자료 <span>08</span></a>
-        <a class="mobile-contact" href="#results">매장 운영 실적 보기 ↗</a>
+        <a href="#contact">문의하기 <span>09</span></a>
+        <a class="mobile-contact" href="#contact">문의 남기기 ↗</a>
       </nav>
     </header>
 
@@ -272,13 +274,42 @@
         <div class="shell final-cta-inner reveal">
           <p class="orange-kicker">READY FOR THE NEXT ROUND?</p>
           <h2 id="contact-title">LET'S MAKE<br /><em>IT HAPPEN.</em></h2>
-          <div class="final-cta-bottom"><p>새로운 운동의 일상, 새로운 창업의 시작.<br />데일리 멀티짐과 함께 다음 단계를 준비해 보세요.</p><a href="#gallery" class="button button-dark">브랜드 자료 확인하기 <span aria-hidden="true">↗</span></a></div>
+          <div class="final-cta-bottom">
+            <div class="contact-copy">
+              <p>가맹 상담부터 서비스 이용 문의까지.<br />데일리 멀티짐에 궁금한 점을 남겨주세요.</p>
+              <div class="contact-direct"><span>DIRECT CONTACT / EMAIL</span><a href="mailto:service@dailymultigym.com">service@dailymultigym.com ↗</a></div>
+            </div>
+            <form class="contact-form" name="daily-multigym-inquiry" method="POST" action="/thank-you.html" data-netlify="true" data-netlify-honeypot="bot-field">
+              <input type="hidden" name="subject" value="[DAILY MULTI GYM] 홈페이지 문의 접수" />
+              <p class="contact-honeypot" aria-hidden="true"><label>이 칸은 비워 두세요 <input name="bot-field" type="text" tabindex="-1" autocomplete="off" /></label></p>
+              <div class="contact-form-header"><span>GET IN TOUCH / 01</span><h3>문의 남기기</h3><p>작성하신 내용은 데일리 멀티짐 고객지원팀에 접수됩니다.</p></div>
+              <div class="contact-fields">
+                <label class="contact-field"><span>문의 유형 <b>*</b></span>
+                  <select name="category" required>
+                    <option value="" selected disabled>문의 유형 선택</option>
+                    <option value="가맹 문의">가맹 문의</option>
+                    <option value="홈페이지 및 일반 문의">홈페이지 및 일반 문의</option>
+                    <option value="SaaS 이용 문의">SaaS 이용 문의</option>
+                    <option value="오류 및 불편사항">오류 및 불편사항</option>
+                    <option value="제안 및 기타">제안 및 기타</option>
+                  </select>
+                </label>
+                <label class="contact-field"><span>이름 / 업체명 <b>*</b></span><input name="name" type="text" autocomplete="name" maxlength="100" placeholder="성함 또는 업체명을 입력해 주세요" required /></label>
+                <label class="contact-field"><span>이메일 <b>*</b></span><input name="email" type="email" autocomplete="email" maxlength="254" placeholder="답변을 받을 이메일 주소" required /></label>
+                <label class="contact-field"><span>연락처 (선택)</span><input name="phone" type="tel" autocomplete="tel" maxlength="30" placeholder="전화 상담을 원할 경우 입력" /></label>
+                <label class="contact-field contact-field-full"><span>문의 내용 <b>*</b></span><textarea name="message" rows="5" minlength="10" maxlength="3000" placeholder="궁금한 내용이나 불편사항을 자세히 작성해 주세요." required></textarea></label>
+              </div>
+              <label class="contact-consent"><input type="checkbox" name="privacy_consent" value="동의함" required /><span>문의 응대를 위한 개인정보 수집·이용에 동의합니다. <small>수집 항목: 이름, 이메일, 문의 내용, 선택 입력한 연락처 / 이용 목적: 문의 접수 및 회신 / 보유기간: 문의 처리 완료 후 3개월</small></span></label>
+              <button type="submit" class="contact-submit">문의 보내기 <span aria-hidden="true">↗</span></button>
+              <p class="contact-form-note">* 필수 항목 · 답변은 <strong>service@dailymultigym.com</strong>을 통해 안내됩니다.</p>
+            </form>
+          </div>
         </div>
       </section>
     </main>
 
     <footer class="site-footer">
-      <div class="shell footer-main"><div><a class="brand-mark footer-brand" href="#top"><span class="brand-name">DAILY<span>MULTI GYM</span><b>//</b></span><span class="brand-sub">PUNCH <i>×</i> FITNESS <i>×</i> STRENGTH</span></a><p>MORE THAN A GYM. A BETTER YOU.</p></div><div class="footer-links"><a href="#identity">브랜드 소개</a><a href="#programs">프로그램</a><a href="#results">매장 사례</a><a href="#franchise">가맹 안내</a><a href="#impact">사회적 가치</a><a href="#gallery">브랜드 자료</a></div><div class="footer-contact"><span>DAILY MULTI GYM</span><a href="#top">PUNCH YOUR DAY ↗</a></div></div>
+      <div class="shell footer-main"><div><a class="brand-mark footer-brand" href="#top"><span class="brand-name">DAILY<span>MULTI GYM</span><b>//</b></span><span class="brand-sub">PUNCH <i>×</i> FITNESS <i>×</i> STRENGTH</span></a><p>MORE THAN A GYM. A BETTER YOU.</p></div><div class="footer-links"><a href="#identity">브랜드 소개</a><a href="#programs">프로그램</a><a href="#results">매장 사례</a><a href="#franchise">가맹 안내</a><a href="#impact">사회적 가치</a><a href="#gallery">브랜드 자료</a></div><div class="footer-contact"><span>CONTACT / DAILY MULTI GYM</span><a class="footer-email" href="mailto:service@dailymultigym.com">service@dailymultigym.com ↗</a></div></div>
       <div class="shell footer-bottom"><p>© <span id="year">2026</span> DAILY MULTI GYM. All rights reserved.</p><p>브랜드 소개 자료를 기준으로 구성되었습니다. 운영·계약·수익 정보는 상담 시 확인해 주세요.</p><a href="#top">BACK TO TOP ↑</a></div>
     </footer>
 
