@@ -93,12 +93,16 @@ img { display: block; max-width: 100%; }
 .hero-collab::before { background: linear-gradient(90deg,#090909 0%,rgba(9,9,9,.96) 30%,rgba(9,9,9,.70) 56%,rgba(9,9,9,.10) 100%),linear-gradient(0deg,#080808 0%,transparent 53%); }
 .hero-copy-collab { width: min(100%,1100px); }
 .hero-join-kicker { margin: 32px 0 15px; color: #f1f1f1; font-size: clamp(17px,1.9vw,26px); font-weight: 800; letter-spacing: -1px; }
-.hero-join-title { margin: 0 0 21px -5px; text-shadow: 0 9px 35px rgba(0,0,0,.38); }
-.hero-hospital-name { display: block; font: 900 clamp(68px,7.1vw,115px)/1.13 var(--body); letter-spacing: -.075em; white-space: nowrap; }
-.hero-hospital-name b { margin-left: .1em; color: var(--orange); font: italic 900 1.1em/.8 var(--display); letter-spacing: -.06em; vertical-align: .04em; }
-.hero-fitness-name { display: block; margin-top: 7px; color: #fff; font: italic 900 clamp(96px,10.5vw,163px)/.84 var(--display); letter-spacing: -4px; white-space: nowrap; }
-.hero-fitness-name em { color: var(--orange); font-style: inherit; }
-.hero-join-claim { margin: 20px 0 13px; font-size: clamp(20px,2.2vw,31px); font-weight: 900; letter-spacing: -1.3px; }
+.hero-venture-title { margin: 0 0 25px -5px; color: #fff; font: italic 900 clamp(66px,9.4vw,146px)/.92 var(--display); letter-spacing: -.026em; white-space: nowrap; text-shadow: 0 9px 35px rgba(0,0,0,.38); }
+.hero-venture-title span { color: #fff; }
+.hero-venture-title em { color: var(--orange); font-style: inherit; }
+.hero-venture-subline { display: flex; align-items: center; flex-wrap: wrap; width: fit-content; max-width: 100%; gap: 9px 17px; padding: 17px 0 0; border-top: 2px solid var(--orange); }
+.hero-venture-hospital { font: 900 clamp(25px,3.3vw,43px)/1.1 var(--body); letter-spacing: -.07em; white-space: nowrap; }
+.hero-venture-cross { color: var(--orange); font: italic 900 clamp(33px,3.7vw,51px)/.8 var(--display); }
+.hero-venture-punch { font: italic 900 clamp(33px,3.8vw,51px)/.9 var(--display); letter-spacing: -.01em; white-space: nowrap; }
+.hero-venture-punch em { color: var(--orange); font-style: inherit; }
+.hero-venture-badge { color: #fff; border: 1px solid rgba(255,91,33,.9); background: rgba(255,91,33,.19); padding: 9px 13px; font-size: clamp(13px,1.3vw,17px); font-weight: 900; letter-spacing: -.04em; white-space: nowrap; }
+.hero-join-claim { margin: 23px 0 13px; font-size: clamp(20px,2.2vw,31px); font-weight: 900; letter-spacing: -1.3px; }
 .hero-join-claim strong { color: var(--orange); }
 .hero-collab .hero-description { max-width: 660px; margin-bottom: 24px; }
 .hero-partner-stamps { display: flex; align-items: center; flex-wrap: wrap; gap: 13px; margin-top: 33px; color: rgba(255,255,255,.70); font: 800 10px/1.4 "DM Sans",sans-serif; letter-spacing: 1px; }
@@ -479,7 +483,9 @@ img { display: block; max-width: 100%; }
   .identity-chips span { font-size: 17px; }
   .hero-side { display: none; }
   .hero-collab .hero-image { inset: 0 0 0 8%; background-position: 60% 20%; }
-  .hero-fitness-name { font-size: clamp(82px,11vw,120px); }
+  .hero-venture-title { font-size: clamp(58px,9.1vw,101px); }
+  .hero-venture-hospital { font-size: clamp(27px,3.5vw,34px); }
+  .hero-venture-punch { font-size: clamp(35px,4.2vw,43px); }
   .alliance-grid { grid-template-columns: 1fr; }
   .alliance-visual { min-height: 510px; }
   .alliance-story { padding: 55px; }
@@ -542,9 +548,12 @@ img { display: block; max-width: 100%; }
   .hero-collab::before { background: linear-gradient(0deg,#070707 1%,rgba(0,0,0,.96) 30%,rgba(0,0,0,.62) 66%,rgba(0,0,0,.24)); }
   .hero-collab .hero-inner { padding-bottom: 85px; }
   .hero-join-kicker { font-size: 15px; margin: 24px 0 13px; }
-  .hero-hospital-name { font-size: clamp(51px,13vw,72px); }
-  .hero-fitness-name { font-size: clamp(72px,17vw,103px); letter-spacing: -2.4px; line-height: .9; white-space: normal; margin-top: 9px; }
-  .hero-fitness-name em { display: block; }
+  .hero-venture-title { font-size: clamp(35px,9.1vw,59px); margin: 0 0 19px -2px; letter-spacing: -.027em; }
+  .hero-venture-subline { gap: 9px 11px; padding-top: 13px; }
+  .hero-venture-hospital { font-size: clamp(22px,6.5vw,31px); }
+  .hero-venture-cross { font-size: 29px; }
+  .hero-venture-punch { font-size: clamp(25px,7vw,35px); }
+  .hero-venture-badge { font-size: 12px; padding: 7px 9px; }
   .hero-join-claim { font-size: 19px; margin: 23px 0 11px; }
   .hero-partner-stamps { margin-top: 22px; gap: 6px; font-size: 8px; }
   .hero-partner-stamps span { padding: 8px; }
