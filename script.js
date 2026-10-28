@@ -43,7 +43,7 @@ if ('IntersectionObserver' in window) {
 }
 
 const desktopLinks = [...document.querySelectorAll('.desktop-nav a')];
-const navigationSections = [...document.querySelectorAll('#identity, #programs, #results, #franchise, #impact, #gallery')];
+const navigationSections = [...document.querySelectorAll('#alliance, #identity, #programs, #results, #franchise, #impact, #gallery')];
 if ('IntersectionObserver' in window) {
   const sectionObserver = new IntersectionObserver(entries => {
     const visible = entries.filter(entry => entry.isIntersecting);
