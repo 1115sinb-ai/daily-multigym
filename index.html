@@ -287,16 +287,26 @@
       <section class="section gallery-section" id="gallery" aria-labelledby="gallery-title">
         <div class="shell">
           <div class="section-top reveal"><div class="section-label"><span>08</span> / BRAND ARCHIVE</div><span class="section-line"></span><span class="microcopy">THE STORY, IN PICTURES</span></div>
-          <div class="gallery-heading reveal"><div><p class="orange-kicker">EXPLORE OUR MATERIALS</p><h2 id="gallery-title" class="display-title">OUR BRAND.<br /><em>IN MOTION.</em></h2></div><p>업로드된 브랜드 자료를 이미지에 표시된 번호에 맞춰 <strong>01 → 08 순서</strong>로 정리했습니다. 이미지를 누르면 크게 보고, 화살표로 다음 장을 넘길 수 있습니다.</p></div>
-          <div class="gallery-grid">
-            <button class="gallery-card reveal" type="button" data-gallery-open="0" aria-label="01 브랜드 아이덴티티 확대"><img src="assets/brand-identity.jpg" alt="01 브랜드 아이덴티티" loading="lazy" /><span class="gallery-overlay"><span><i>01</i> BRAND IDENTITY</span><b>↗</b></span></button>
-            <button class="gallery-card reveal" type="button" data-gallery-open="1" aria-label="02 실제 매장 사례 확대"><img src="assets/store-case.jpg" alt="02 실제 매장 사례" loading="lazy" /><span class="gallery-overlay"><span><i>02</i> STORE CASE</span><b>↗</b></span></button>
-            <button class="gallery-card reveal" type="button" data-gallery-open="2" aria-label="03 수익 모델 확대"><img src="assets/investment-model.jpg" alt="03 투자 모델" loading="lazy" /><span class="gallery-overlay"><span><i>03</i> INVESTMENT</span><b>↗</b></span></button>
-            <button class="gallery-card reveal" type="button" data-gallery-open="3" aria-label="04 차별화 포인트 확대"><img src="assets/why-punch.jpg" alt="04 펀치데일리 차별성" loading="lazy" /><span class="gallery-overlay"><span><i>04</i> WHY PUNCH</span><b>↗</b></span></button>
-            <button class="gallery-card reveal" type="button" data-gallery-open="4" aria-label="05 확장 계획 확대"><img src="assets/expansion.jpg" alt="05 확장 계획" loading="lazy" /><span class="gallery-overlay"><span><i>05</i> EXPANSION</span><b>↗</b></span></button>
-            <button class="gallery-card reveal" type="button" data-gallery-open="5" aria-label="06 가맹과 엑시트 확대"><img src="assets/process.jpg" alt="06 가맹과 엑시트" loading="lazy" /><span class="gallery-overlay"><span><i>06</i> FRANCHISE</span><b>↗</b></span></button>
-            <button class="gallery-card reveal" type="button" data-gallery-open="6" aria-label="07 브랜드 비전 확대"><img src="assets/vision.jpg" alt="07 브랜드 비전" loading="lazy" /><span class="gallery-overlay"><span><i>07</i> VISION</span><b>↗</b></span></button>
-            <button class="gallery-card reveal" type="button" data-gallery-open="7" aria-label="08 사회적 가치 확대"><img src="assets/impact.jpg" alt="08 사회적 가치" loading="lazy" /><span class="gallery-overlay"><span><i>08</i> SOCIAL IMPACT</span><b>↗</b></span></button>
+          <div class="gallery-heading reveal"><div><p class="orange-kicker">EXPLORE OUR MATERIALS</p><h2 id="gallery-title" class="display-title">OUR BRAND.<br /><em>IN MOTION.</em></h2></div><p>브랜드 자료는 <strong>01 → 08 순서</strong>로 오른쪽으로 넘어갑니다. 좌우 버튼이나 스와이프로도 넘길 수 있고, 이미지를 누르면 크게 볼 수 있습니다.</p></div>
+          <div class="gallery-carousel" aria-label="브랜드 자료 슬라이더">
+            <div class="gallery-carousel-header">
+              <div class="gallery-carousel-label"><strong id="gallery-active-number">01</strong><span>/ 08</span><small>AUTO SLIDE · SWIPE TO EXPLORE</small></div>
+              <div class="gallery-carousel-controls">
+                <button type="button" class="gallery-scroll-prev" aria-label="이전 브랜드 자료" aria-controls="gallery-track"><svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="m15 18-6-6 6-6" /></svg></button>
+                <button type="button" class="gallery-scroll-next" aria-label="다음 브랜드 자료" aria-controls="gallery-track"><svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="m9 18 6-6-6-6" /></svg></button>
+              </div>
+            </div>
+            <div class="gallery-grid" id="gallery-track" role="region" aria-roledescription="carousel" aria-label="브랜드 자료 8장" tabindex="0">
+              <button class="gallery-card reveal" type="button" data-gallery-open="0" aria-label="01 브랜드 아이덴티티 확대"><img src="assets/brand-identity.jpg" alt="01 브랜드 아이덴티티" loading="lazy" /><span class="gallery-overlay"><span><i>01</i> BRAND IDENTITY</span><b>↗</b></span></button>
+              <button class="gallery-card reveal" type="button" data-gallery-open="1" aria-label="02 실제 매장 사례 확대"><img src="assets/store-case.jpg" alt="02 실제 매장 사례" loading="lazy" /><span class="gallery-overlay"><span><i>02</i> STORE CASE</span><b>↗</b></span></button>
+              <button class="gallery-card reveal" type="button" data-gallery-open="2" aria-label="03 수익 모델 확대"><img src="assets/investment-model.jpg" alt="03 투자 모델" loading="lazy" /><span class="gallery-overlay"><span><i>03</i> INVESTMENT</span><b>↗</b></span></button>
+              <button class="gallery-card reveal" type="button" data-gallery-open="3" aria-label="04 차별화 포인트 확대"><img src="assets/why-punch.jpg" alt="04 펀치데일리 차별성" loading="lazy" /><span class="gallery-overlay"><span><i>04</i> WHY PUNCH</span><b>↗</b></span></button>
+              <button class="gallery-card reveal" type="button" data-gallery-open="4" aria-label="05 확장 계획 확대"><img src="assets/expansion.jpg" alt="05 확장 계획" loading="lazy" /><span class="gallery-overlay"><span><i>05</i> EXPANSION</span><b>↗</b></span></button>
+              <button class="gallery-card reveal" type="button" data-gallery-open="5" aria-label="06 가맹과 엑시트 확대"><img src="assets/process.jpg" alt="06 가맹과 엑시트" loading="lazy" /><span class="gallery-overlay"><span><i>06</i> FRANCHISE</span><b>↗</b></span></button>
+              <button class="gallery-card reveal" type="button" data-gallery-open="6" aria-label="07 브랜드 비전 확대"><img src="assets/vision.jpg" alt="07 브랜드 비전" loading="lazy" /><span class="gallery-overlay"><span><i>07</i> VISION</span><b>↗</b></span></button>
+              <button class="gallery-card reveal" type="button" data-gallery-open="7" aria-label="08 사회적 가치 확대"><img src="assets/impact.jpg" alt="08 사회적 가치" loading="lazy" /><span class="gallery-overlay"><span><i>08</i> SOCIAL IMPACT</span><b>↗</b></span></button>
+            </div>
+            <div class="gallery-carousel-progress" aria-hidden="true"><span class="gallery-carousel-progress-thumb"></span></div>
           </div>
           <button class="archive-more reveal" type="button" data-gallery-open="0">전체 브랜드 자료 12장 보기 · 01부터 순서대로 <span aria-hidden="true">↗</span></button>
         </div>

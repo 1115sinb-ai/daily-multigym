@@ -125,5 +125,81 @@ dialogImage?.addEventListener('touchend', event => {
   touchStartX = null;
 }, { passive: true });
 
+// Horizontal brand archive: advance to the right, with arrows and native touch swiping.
+const galleryCarousel = document.querySelector('.gallery-carousel');
+const galleryTrack = document.getElementById('gallery-track');
+const galleryCards = [...(galleryTrack?.querySelectorAll('.gallery-card') ?? [])];
+const galleryActiveNumber = document.getElementById('gallery-active-number');
+const galleryProgressThumb = document.querySelector('.gallery-carousel-progress-thumb');
+const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
+
+if (galleryCarousel && galleryTrack && galleryCards.length > 1) {
+  let isCarouselVisible = !('IntersectionObserver' in window);
+  let isCarouselHovered = false;
+  let isCarouselFocused = false;
+  let pauseUntil = 0;
+
+  function updateGalleryCarousel() {
+    const maxScroll = Math.max(0, galleryTrack.scrollWidth - galleryTrack.clientWidth);
+    const cardStep = galleryCards[1].offsetLeft - galleryCards[0].offsetLeft;
+    const activeIndex = cardStep > 0 ? Math.round(galleryTrack.scrollLeft / cardStep) : 0;
+    if (galleryActiveNumber) galleryActiveNumber.textContent = String(Math.min(activeIndex + 1, galleryCards.length)).padStart(2, '0');
+    if (galleryProgressThumb) {
+      const thumbWidth = Math.min(100, galleryTrack.clientWidth / galleryTrack.scrollWidth * 100);
+      galleryProgressThumb.style.width = `${thumbWidth}%`;
+      galleryProgressThumb.style.left = `${maxScroll ? galleryTrack.scrollLeft / maxScroll * (100 - thumbWidth) : 0}%`;
+    }
+  }
+
+  function moveGallery(direction, manual = false) {
+    const step = galleryCards[1].offsetLeft - galleryCards[0].offsetLeft;
+    const maxScroll = galleryTrack.scrollWidth - galleryTrack.clientWidth;
+    if (manual) pauseUntil = Date.now() + 6500;
+    if (step <= 0 || maxScroll <= 0) return;
+
+    if ((direction > 0 && galleryTrack.scrollLeft >= maxScroll - 3) || (direction < 0 && galleryTrack.scrollLeft <= 3)) {
+      galleryTrack.style.scrollBehavior = 'auto';
+      galleryTrack.scrollLeft = direction > 0 ? 0 : maxScroll;
+      requestAnimationFrame(() => { galleryTrack.style.scrollBehavior = ''; updateGalleryCarousel(); });
+    } else {
+      galleryTrack.scrollBy({ left: step * direction, behavior: prefersReducedMotion.matches ? 'auto' : 'smooth' });
+    }
+  }
+
+  galleryCarousel.querySelector('.gallery-scroll-prev')?.addEventListener('click', () => moveGallery(-1, true));
+  galleryCarousel.querySelector('.gallery-scroll-next')?.addEventListener('click', () => moveGallery(1, true));
+  galleryTrack.addEventListener('keydown', event => {
+    if (event.key === 'ArrowLeft' || event.key === 'ArrowRight') {
+      event.preventDefault();
+      moveGallery(event.key === 'ArrowRight' ? 1 : -1, true);
+    }
+  });
+  galleryTrack.addEventListener('scroll', updateGalleryCarousel, { passive: true });
+  galleryTrack.addEventListener('touchstart', () => { pauseUntil = Date.now() + 6500; }, { passive: true });
+  galleryCarousel.addEventListener('focusin', () => { isCarouselFocused = true; });
+  galleryCarousel.addEventListener('focusout', event => {
+    if (!galleryCarousel.contains(event.relatedTarget)) isCarouselFocused = false;
+  });
+  if (window.matchMedia('(hover: hover)').matches) {
+    galleryCarousel.addEventListener('mouseenter', () => { isCarouselHovered = true; });
+    galleryCarousel.addEventListener('mouseleave', () => { isCarouselHovered = false; });
+  }
+
+  if ('IntersectionObserver' in window) {
+    const carouselObserver = new IntersectionObserver(([entry]) => {
+      isCarouselVisible = entry.isIntersecting;
+    }, { threshold: 0.2 });
+    carouselObserver.observe(galleryCarousel);
+  }
+
+  window.addEventListener('resize', updateGalleryCarousel);
+  updateGalleryCarousel();
+  setInterval(() => {
+    if (isCarouselVisible && !isCarouselHovered && !isCarouselFocused && !document.hidden && !galleryDialog?.open && !prefersReducedMotion.matches && Date.now() >= pauseUntil) {
+      moveGallery(1);
+    }
+  }, 4700);
+}
+
 const year = document.getElementById('year');
 if (year) year.textContent = String(new Date().getFullYear());
