@@ -40,6 +40,8 @@ python3 -m http.server 8000
 
 ## Netlify 자동 배포와 문의 접수
 
+홈페이지 문의 폼은 **창업·가맹 상담 전용**입니다. SaaS 이용 문의, 오류 및 불편사항은 별도 SaaS 서비스 안에서 접수하도록 구분합니다.
+
 1. Netlify의 **Add new project → Import an existing project**에서 GitHub 저장소 `1115sinb-ai/daily-multigym`을 선택합니다.
 2. 브랜치는 `main`, **Build command는 비워두고**, **Publish directory는 `.`**(저장소 루트)로 설정합니다. `netlify.toml`에도 설정되어 있습니다.
 3. Netlify 프로젝트의 **Forms → Enable form detection**을 활성화하고 최신 커밋을 배포합니다.

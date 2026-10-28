@@ -33,9 +33,9 @@
           <a href="#franchise">가맹 안내</a>
           <a href="#alliance">수병원 협력</a>
           <a href="#gallery">브랜드 자료</a>
-          <a href="#contact">문의하기</a>
+          <a href="#contact">창업 문의</a>
         </nav>
-        <a class="nav-cta" href="#contact"><span>문의하기</span><span aria-hidden="true">↗</span></a>
+        <a class="nav-cta" href="#contact"><span>창업 문의</span><span aria-hidden="true">↗</span></a>
         <button class="menu-toggle" type="button" aria-controls="mobile-nav" aria-expanded="false" aria-label="메뉴 열기">
           <span></span><span></span><span></span>
         </button>
@@ -47,8 +47,8 @@
         <a href="#franchise">가맹 안내 <span>05</span></a>
         <a href="#alliance">수병원 협력 <span>NEW</span></a>
         <a href="#gallery">브랜드 자료 <span>08</span></a>
-        <a href="#contact">문의하기 <span>09</span></a>
-        <a class="mobile-contact" href="#contact">문의 남기기 ↗</a>
+        <a href="#contact">창업 문의 <span>09</span></a>
+        <a class="mobile-contact" href="#contact">창업 상담 신청 ↗</a>
       </nav>
     </header>
 
@@ -68,7 +68,7 @@
             <p class="hero-description">건강을 생각하는 의료의 시선과, 일상의 움직임을 만드는 피트니스의 에너지.<br />서로 다른 전문성이 만나는 새로운 협력의 시작.</p>
             <div class="hero-actions">
               <a class="button button-orange" href="#alliance">협력 스토리 보기 <span aria-hidden="true">↗</span></a>
-              <a class="button button-outline" href="#contact">협력·가맹 문의 <span aria-hidden="true">↗</span></a>
+              <a class="button button-outline" href="#contact">창업·가맹 문의 <span aria-hidden="true">↗</span></a>
             </div>
             <div class="hero-partner-stamps" aria-label="협력 브랜드"><span>SU HOSPITAL / 수병원</span><i aria-hidden="true">×</i><span>PUNCH DAILY / 데일리 멀티짐</span></div>
           </div>
@@ -105,7 +105,7 @@
               <h2 id="alliance-title">함께라서<br />더 <em>강한</em><br />내일.</h2>
               <p class="alliance-story-copy">수병원과 펀치데일리의 협력은 건강을 생각하는 관점과 일상 속 운동 경험이 만나는 지점에서 출발합니다. 더 많은 사람이 건강한 움직임을 이어갈 수 있도록 새로운 가능성을 만들어갑니다.</p>
               <div class="alliance-pillars"><span>의료의 전문성</span><b aria-hidden="true">+</b><span>피트니스의 에너지</span></div>
-              <a class="alliance-story-cta" href="#contact">협력 및 가맹 문의하기 <span aria-hidden="true">↗</span></a>
+              <a class="alliance-story-cta" href="#contact">창업·가맹 상담하기 <span aria-hidden="true">↗</span></a>
             </div>
           </div>
           <div class="alliance-footline"><span>DAILY MULTI GYM / PUNCH YOUR DAY</span><span>HOSPITAL × FITNESS COLLABORATION</span></div>
@@ -306,32 +306,24 @@
           <h2 id="contact-title">LET'S MAKE<br /><em>IT HAPPEN.</em></h2>
           <div class="final-cta-bottom">
             <div class="contact-copy">
-              <p>가맹 상담부터 서비스 이용 문의까지.<br />데일리 멀티짐에 궁금한 점을 남겨주세요.</p>
-              <div class="contact-direct"><span>DIRECT CONTACT / EMAIL</span><a href="mailto:service@dailymultigym.com">service@dailymultigym.com ↗</a></div>
+              <p>데일리 멀티짐 창업·가맹에 관심이 있으신가요?<br />희망 지역과 궁금한 내용을 남겨주시면 상담을 도와드립니다.</p>
+              <div class="contact-direct"><span>FRANCHISE INQUIRY / EMAIL</span><a href="mailto:service@dailymultigym.com">service@dailymultigym.com ↗</a></div>
             </div>
             <form class="contact-form" name="daily-multigym-inquiry" method="POST" action="/thank-you.html" data-netlify="true" data-netlify-honeypot="bot-field">
-              <input type="hidden" name="subject" value="[DAILY MULTI GYM] 홈페이지 문의 접수" />
+              <input type="hidden" name="subject" value="[DAILY MULTI GYM] 창업·가맹 문의" />
+              <input type="hidden" name="category" value="창업·가맹 문의" />
               <p class="contact-honeypot" aria-hidden="true"><label>이 칸은 비워 두세요 <input name="bot-field" type="text" tabindex="-1" autocomplete="off" /></label></p>
-              <div class="contact-form-header"><span>GET IN TOUCH / 01</span><h3>문의 남기기</h3><p>작성하신 내용은 데일리 멀티짐 고객지원팀에 접수됩니다.</p></div>
+              <div class="contact-form-header"><span>FRANCHISE INQUIRY / 01</span><h3>창업 상담 신청</h3><p>데일리 멀티짐 창업·가맹 관련 문의를 접수합니다.</p></div>
               <div class="contact-fields">
-                <label class="contact-field"><span>문의 유형 <b>*</b></span>
-                  <select name="category" required>
-                    <option value="" selected disabled>문의 유형 선택</option>
-                    <option value="가맹 문의">가맹 문의</option>
-                    <option value="홈페이지 및 일반 문의">홈페이지 및 일반 문의</option>
-                    <option value="SaaS 이용 문의">SaaS 이용 문의</option>
-                    <option value="오류 및 불편사항">오류 및 불편사항</option>
-                    <option value="제안 및 기타">제안 및 기타</option>
-                  </select>
-                </label>
-                <label class="contact-field"><span>이름 / 업체명 <b>*</b></span><input name="name" type="text" autocomplete="name" maxlength="100" placeholder="성함 또는 업체명을 입력해 주세요" required /></label>
+                <label class="contact-field"><span>성함 <b>*</b></span><input name="name" type="text" autocomplete="name" maxlength="100" placeholder="성함을 입력해 주세요" required /></label>
                 <label class="contact-field"><span>이메일 <b>*</b></span><input name="email" type="email" autocomplete="email" maxlength="254" placeholder="답변을 받을 이메일 주소" required /></label>
                 <label class="contact-field"><span>연락처 (선택)</span><input name="phone" type="tel" autocomplete="tel" maxlength="30" placeholder="전화 상담을 원할 경우 입력" /></label>
-                <label class="contact-field contact-field-full"><span>문의 내용 <b>*</b></span><textarea name="message" rows="5" minlength="10" maxlength="3000" placeholder="궁금한 내용이나 불편사항을 자세히 작성해 주세요." required></textarea></label>
+                <label class="contact-field"><span>희망 창업 지역 (선택)</span><input name="preferred_region" type="text" maxlength="80" placeholder="예: 서울 마포구" /></label>
+                <label class="contact-field contact-field-full"><span>창업 문의 내용 <b>*</b></span><textarea name="message" rows="5" minlength="10" maxlength="3000" placeholder="창업 일정, 예상 예산 등 궁금한 내용을 자유롭게 작성해 주세요." required></textarea></label>
               </div>
-              <label class="contact-consent"><input type="checkbox" name="privacy_consent" value="동의함" required /><span>문의 응대를 위한 개인정보 수집·이용에 동의합니다. <small>수집 항목: 이름, 이메일, 문의 내용, 선택 입력한 연락처 / 이용 목적: 문의 접수 및 회신 / 보유기간: 문의 처리 완료 후 3개월</small></span></label>
-              <button type="submit" class="contact-submit">문의 보내기 <span aria-hidden="true">↗</span></button>
-              <p class="contact-form-note">* 필수 항목 · 답변은 <strong>service@dailymultigym.com</strong>을 통해 안내됩니다.</p>
+              <label class="contact-consent"><input type="checkbox" name="privacy_consent" value="동의함" required /><span>창업 상담을 위한 개인정보 수집·이용에 동의합니다. <small>수집 항목: 성함, 이메일, 문의 내용, 선택 입력한 연락처·희망 창업 지역 / 이용 목적: 창업·가맹 상담 및 회신 / 보유기간: 문의 처리 완료 후 3개월</small></span></label>
+              <button type="submit" class="contact-submit">창업 문의 보내기 <span aria-hidden="true">↗</span></button>
+              <p class="contact-form-note">* 필수 항목 · 창업 상담 회신은 <strong>service@dailymultigym.com</strong>을 통해 안내됩니다.</p>
             </form>
           </div>
         </div>
@@ -339,7 +331,7 @@
     </main>
 
     <footer class="site-footer">
-      <div class="shell footer-main"><div><a class="brand-mark footer-brand" href="#top"><span class="brand-name">DAILY<span>MULTI GYM</span><b>//</b></span><span class="brand-sub">PUNCH <i>×</i> FITNESS <i>×</i> STRENGTH</span></a><p>MORE THAN A GYM. A BETTER YOU.</p></div><div class="footer-links"><a href="#identity">브랜드 소개</a><a href="#programs">프로그램</a><a href="#results">매장 사례</a><a href="#franchise">가맹 안내</a><a href="#alliance">수병원 협력</a><a href="#gallery">브랜드 자료</a></div><div class="footer-contact"><span>CONTACT / DAILY MULTI GYM</span><a class="footer-email" href="mailto:service@dailymultigym.com">service@dailymultigym.com ↗</a></div></div>
+      <div class="shell footer-main"><div><a class="brand-mark footer-brand" href="#top"><span class="brand-name">DAILY<span>MULTI GYM</span><b>//</b></span><span class="brand-sub">PUNCH <i>×</i> FITNESS <i>×</i> STRENGTH</span></a><p>MORE THAN A GYM. A BETTER YOU.</p></div><div class="footer-links"><a href="#identity">브랜드 소개</a><a href="#programs">프로그램</a><a href="#results">매장 사례</a><a href="#franchise">가맹 안내</a><a href="#alliance">수병원 협력</a><a href="#gallery">브랜드 자료</a></div><div class="footer-contact"><span>CONTACT / FRANCHISE INQUIRY</span><a class="footer-email" href="mailto:service@dailymultigym.com">service@dailymultigym.com ↗</a></div></div>
       <div class="shell footer-bottom"><p>© <span id="year">2026</span> DAILY MULTI GYM. All rights reserved.</p><p>브랜드 소개 자료를 기준으로 구성되었습니다. 운영·계약·수익 정보는 상담 시 확인해 주세요.</p><a href="#top">BACK TO TOP ↑</a></div>
     </footer>
 
