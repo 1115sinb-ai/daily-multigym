@@ -60,18 +60,18 @@ if ('IntersectionObserver' in window) {
 }
 
 const archive = [
-  { src: 'assets/partnership.jpg', title: '수병원 업무협약 및 브랜드 소개' },
+  { src: 'assets/brand-identity.jpg', title: '01 · BRAND IDENTITY / 브랜드 아이덴티티' },
+  { src: 'assets/store-case.jpg', title: '02 · REAL STORE CASE / 실제 매장 사례' },
+  { src: 'assets/investment-model.jpg', title: '03 · INVESTMENT MODEL / 가맹 투자 모델' },
+  { src: 'assets/why-punch.jpg', title: '04 · WHY PUNCH DAILY? / 브랜드 차별성' },
+  { src: 'assets/expansion.jpg', title: '05 · EXPANSION PLAN / 확장 계획' },
+  { src: 'assets/process.jpg', title: '06 · FRANCHISE & EXIT / 가맹 절차와 회수 전략' },
+  { src: 'assets/vision.jpg', title: '07 · OUR VISION / 브랜드 비전' },
+  { src: 'assets/impact.jpg', title: '08 · SOCIAL IMPACT / 청년 창업과 사회적 가치' },
+  { src: 'assets/brand-overview.jpg', title: '펀치데일리 브랜드 메인 비주얼' },
   { src: 'assets/launch-support.jpg', title: '5천만원 창업 지원 프로모션 자료' },
   { src: 'assets/franchise-exit.jpg', title: '창업·엑시트 플랜 소개' },
-  { src: 'assets/investment-model.jpg', title: '가맹 투자 모델 및 수익 구조' },
-  { src: 'assets/why-punch.jpg', title: '펀치데일리의 차별화된 프로그램' },
-  { src: 'assets/store-case.jpg', title: '실제 매장 사례 및 매출 자료' },
-  { src: 'assets/expansion.jpg', title: '브랜드 확장 계획' },
-  { src: 'assets/process.jpg', title: '가맹 절차 및 출구 전략' },
-  { src: 'assets/vision.jpg', title: '브랜드 비전' },
-  { src: 'assets/impact.jpg', title: '청년 창업과 사회적 가치' },
-  { src: 'assets/brand-overview.jpg', title: '펀치데일리 브랜드 메인 비주얼' },
-  { src: 'assets/brand-identity.jpg', title: '펀치데일리 브랜드 아이덴티티와 시설' },
+  { src: 'assets/ingye-three-month-report.png', title: '인계본점 오픈 3개월 실적 집계 자료' },
 ];
 
 const galleryDialog = document.getElementById('gallery-dialog');
