@@ -1,8 +1,29 @@
 document.documentElement.classList.add('has-js');
 
+// Remove only the unwanted referral label; preserve other parameters and anchors.
+const cleanUrl = new URL(window.location.href);
+if (cleanUrl.searchParams.get('utm_source') === 'chatgpt.com') {
+  cleanUrl.searchParams.delete('utm_source');
+  window.history.replaceState(window.history.state, '', cleanUrl.pathname + cleanUrl.search + cleanUrl.hash);
+}
+
 const header = document.querySelector('.site-header');
 const menuToggle = document.querySelector('.menu-toggle');
 const mobileNav = document.querySelector('.mobile-nav');
+
+// Keep the one-line brand heading inside the viewport, including while web fonts load.
+function fitHeroTitle() {
+  const title = document.querySelector('.hero-venture-title');
+  if (!title) return;
+  title.style.fontSize = '';
+  if (title.clientWidth && title.scrollWidth > title.clientWidth) {
+    const size = parseFloat(getComputedStyle(title).fontSize);
+    title.style.fontSize = `${size * title.clientWidth / title.scrollWidth * .98}px`;
+  }
+}
+fitHeroTitle();
+window.addEventListener('resize', fitHeroTitle);
+document.fonts?.ready.then(fitHeroTitle);
 
 function setMenuOpen(isOpen) {
   menuToggle?.setAttribute('aria-expanded', String(isOpen));
@@ -43,7 +64,7 @@ if ('IntersectionObserver' in window) {
 }
 
 const desktopLinks = [...document.querySelectorAll('.desktop-nav a')];
-const navigationSections = [...document.querySelectorAll('#alliance, #identity, #programs, #results, #franchise, #impact, #gallery')];
+const navigationSections = [...document.querySelectorAll('#alliance, #programs, #locations, #events, #franchise, #careers')];
 if ('IntersectionObserver' in window) {
   const sectionObserver = new IntersectionObserver(entries => {
     const visible = entries.filter(entry => entry.isIntersecting);
@@ -72,6 +93,9 @@ const archive = [
   { src: 'assets/launch-support.jpg', title: '5천만원 창업 지원 프로모션 자료' },
   { src: 'assets/franchise-exit.jpg', title: '창업·엑시트 플랜 소개' },
   { src: 'assets/ingye-three-month-report.png', title: '인계본점 오픈 3개월 실적 집계 자료' },
+  { src: 'assets/hospital-launch-01.webp', title: '2026.11 · 수병원 합작법인 출범 / 건강한 일상' },
+  { src: 'assets/hospital-launch-02.webp', title: '2026.11 · 수병원 합작법인 출범 / 새로운 시작' },
+  { src: 'assets/programs-2026.webp', title: 'PUNCH × FITNESS × STRENGTH / 프로그램 안내' },
 ];
 
 const galleryDialog = document.getElementById('gallery-dialog');

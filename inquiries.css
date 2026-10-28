@@ -1,0 +1,43 @@
+/* Integrated inquiries: static Netlify forms remain usable without JavaScript. */
+.inquiry-hub { min-width: 0; }
+.inquiry-tabs { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 6px; margin-bottom: 12px; }
+.inquiry-tabs a { display: flex; align-items: center; justify-content: center; min-height: 52px; padding: 14px 8px; border: 1px solid rgba(0,0,0,.65); color: #111; background: rgba(255,255,255,.14); text-align: center; font-size: 14px; line-height: 1.5; font-weight: 900; transition: background .2s, color .2s; }
+.inquiry-tabs a:hover { background: rgba(255,255,255,.5); }
+.inquiry-tabs a[aria-selected="true"] { background: #101010; color: #fff; border-color: #101010; }
+.inquiry-tabs a:focus-visible { outline: 3px solid #111; outline-offset: 3px; }
+.inquiry-panel { scroll-margin-top: 110px; }
+.inquiry-panel + .inquiry-panel { margin-top: 30px; }
+.inquiry-hub.is-enhanced .inquiry-panel { margin-top: 0; }
+.inquiry-panel[hidden] { display: none !important; }
+.inquiry-section .contact-copy .inquiry-intro-note { margin: 0 0 34px; font-size: 14px; font-weight: 500; line-height: 1.9; letter-spacing: -.3px; }
+.inquiry-email { margin-top: 28px; }
+.inquiry-section .inquiry-email a { font-size: clamp(24px, 2.5vw, 35px); line-height: 1.25; }
+.inquiry-section .contact-form-header h3 { font-family: var(--body); font-size: clamp(24px, 2.8vw, 34px); line-height: 1.4; letter-spacing: -1.2px; word-break: keep-all; }
+.inquiry-section .contact-field :is(input,select,textarea) { font-size: 16px; }
+.inquiry-section .contact-form-header p { color: #bcbcbc; }
+.inquiry-section .contact-consent small { color: #bcbcbc; }
+.inquiry-availability { margin: 22px 0 0; padding: 13px 15px; border-left: 2px solid var(--orange); background: #1b1b1b; color: #c5c5c5; font-size: 12px; line-height: 1.9; word-break: keep-all; }
+.thank-you-actions { display: flex; flex-wrap: wrap; gap: 12px; }
+.thank-you-inner .thank-you-contact { margin-top: 28px; font-size: 13px; }
+.thank-you-contact a { text-decoration: underline; text-underline-offset: 4px; overflow-wrap: anywhere; }
+@media (max-width: 900px) {
+  .inquiry-section .final-cta-bottom { grid-template-columns: minmax(0,1fr); gap: 38px; }
+  .inquiry-section .contact-copy > p { font-size: 18px; }
+  .inquiry-section .inquiry-email a { font-size: 30px; }
+}
+@media (max-width: 560px) {
+  .inquiry-tabs { gap: 4px; }
+  .inquiry-tabs a { min-height: 48px; padding-inline: 5px; font-size: 12px; }
+  .inquiry-section .contact-fields { grid-template-columns: minmax(0,1fr); }
+  .inquiry-section .contact-form { box-shadow: 5px 5px 0 rgba(0,0,0,.12); }
+  .inquiry-section .contact-form-header h3 { font-size: 26px; }
+  .inquiry-section .inquiry-email a { font-size: clamp(22px, 6vw, 30px); }
+  .inquiry-section .contact-consent { gap: 9px; }
+  .inquiry-section .contact-consent input { width: 22px; height: 22px; }
+  .inquiry-panel { scroll-margin-top: 92px; }
+  .thank-you-actions { width: 100%; }
+  .thank-you-actions .button { width: 100%; min-width: 0; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .inquiry-tabs a { transition: none; }
+}
