@@ -1,8 +1,7 @@
 /* 2026.11 launch: member, branch and careers journeys. */
 [hidden] { display: none !important; }
 button, a, select, input, textarea { -webkit-tap-highlight-color: transparent; }
-.hero-collab .hero-image { inset: 0 0 0 43%; background-image: url('assets/punch-training-poster.webp'); background-size: cover; background-position: 50% 46%; opacity: .8; filter: saturate(.8) contrast(1.06); }
-.hero-collab::before { background: linear-gradient(90deg,#090909 12%,rgba(9,9,9,.94) 38%,rgba(9,9,9,.3) 75%),linear-gradient(0deg,#090909 0%,transparent 55%); }
+/* Keep the original hero artwork, framing and overlays from styles.css. */
 .hero-join-kicker { font-size: clamp(17px,1.8vw,25px); }
 .hero-launch-link { display: inline-flex; flex-wrap: wrap; align-items: center; gap: 12px; margin-top: 28px; color: #dedbd5; font-size: 12px; }
 .hero-launch-link span { font: 800 13px 'DM Sans',sans-serif; color: var(--orange); border: 1px solid #76462f; padding: 8px 10px; }
@@ -154,8 +153,6 @@ button, a, select, input, textarea { -webkit-tap-highlight-color: transparent; }
 }
 @media (max-width: 650px) {
   .hero-collab { min-height: 760px; }
-  .hero-collab .hero-image { inset: 0; background-position: 55% 0; background-size: auto 85%; opacity: .75; }
-  .hero-collab::before { background: linear-gradient(0deg,#090909 1%,rgba(9,9,9,.97) 32%,rgba(9,9,9,.68) 68%,rgba(9,9,9,.25)); }
   .hero-collab .hero-inner { padding-top: 42px; padding-bottom: 85px; }
   .hero-copy-collab { padding-top: 170px; }
   .hero-venture-title { font-size: clamp(38px,13.6vw,88px); }
