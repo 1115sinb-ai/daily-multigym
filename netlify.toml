@@ -1,2 +1,31 @@
 [build]
   publish = "."
+
+# Keep the public production hostname canonical, without changing DNS or mail.
+[[redirects]]
+  from = "https://daily-multigym.netlify.app/*"
+  to = "https://dailymultigym.com/:splat"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "http://daily-multigym.netlify.app/*"
+  to = "https://dailymultigym.com/:splat"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/index.html"
+  to = "/"
+  status = 301
+  force = true
+
+[[headers]]
+  for = "/robots.txt"
+  [headers.values]
+    Content-Type = "text/plain; charset=UTF-8"
+
+[[headers]]
+  for = "/sitemap.xml"
+  [headers.values]
+    Content-Type = "application/xml; charset=UTF-8"
