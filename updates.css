@@ -10,6 +10,14 @@ button, a, select, input, textarea { -webkit-tap-highlight-color: transparent; }
 .hero-venture-title { font-size: clamp(66px,9.4vw,146px); }
 .hero-actions .button { min-height: 54px; }
 
+/* Original partnership card opens its own two-image launch gallery. */
+.alliance-opener { appearance: none; width: 100%; border: 0; border-radius: 0; text-align: left; font: inherit; cursor: pointer; }
+.alliance-opener:focus-visible { outline: 3px solid var(--orange); outline-offset: -3px; }
+.alliance-card-end { display: block; margin-top: 18px; }
+.alliance-open-hint { display: flex; justify-content: space-between; align-items: center; gap: 16px; margin-top: 15px; padding-top: 14px; border-top: 1px solid #ffffff2e; color: #e3dfd9; font: 700 12px/1.5 var(--body); }
+.alliance-open-hint b { color: var(--orange); font-size: 22px; line-height: 1; }
+.alliance-opener:hover .alliance-open-hint { color: var(--orange); }
+
 /* Hospital launch artwork is shown uncropped and can be enlarged. */
 .launch-heading { display: grid; grid-template-columns: 1.2fr 1fr; align-items: end; gap: 42px; margin: 34px 0 42px; }
 .launch-heading h2 { margin: 0; font-size: clamp(28px,3.8vw,57px); font-weight: 900; line-height: 1.35; letter-spacing: -.055em; word-break: keep-all; }

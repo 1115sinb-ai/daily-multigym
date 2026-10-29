@@ -103,23 +103,33 @@ const dialogImage = document.getElementById('dialog-image');
 const dialogTitle = document.getElementById('dialog-title');
 const dialogCounter = document.getElementById('dialog-counter');
 const dialogCaption = document.getElementById('dialog-caption');
+const dialogKicker = galleryDialog?.querySelector('.dialog-kicker');
+const fullArchiveIndexes = archive.map((_, index) => index);
+const allianceArchiveIndexes = [12, 13];
+let activeGalleryIndexes = fullArchiveIndexes;
+// The gallery position is relative to the active group, not the full archive.
 let galleryIndex = 0;
 let lastFocusedElement = null;
 
 function showArchiveImage(index) {
-  galleryIndex = (index + archive.length) % archive.length;
-  const item = archive[galleryIndex];
+  galleryIndex = ((index % activeGalleryIndexes.length) + activeGalleryIndexes.length) % activeGalleryIndexes.length;
+  const item = archive[activeGalleryIndexes[galleryIndex]];
   dialogImage.src = item.src;
   dialogImage.alt = item.title;
   dialogTitle.textContent = item.title;
   dialogCaption.textContent = item.title;
-  dialogCounter.textContent = `${String(galleryIndex + 1).padStart(2, '0')} / ${String(archive.length).padStart(2, '0')}`;
+  dialogCounter.textContent = `${String(galleryIndex + 1).padStart(2, '0')} / ${String(activeGalleryIndexes.length).padStart(2, '0')}`;
 }
 
 document.querySelectorAll('[data-gallery-open]').forEach(button => {
   button.addEventListener('click', () => {
     lastFocusedElement = document.activeElement;
-    showArchiveImage(Number(button.dataset.galleryOpen));
+    const isAlliance = button.dataset.galleryGroup === 'alliance';
+    activeGalleryIndexes = isAlliance ? allianceArchiveIndexes : fullArchiveIndexes;
+    galleryDialog.setAttribute('aria-label', isAlliance ? '수병원 × PUNCH DAILY 합작법인 출범 자료 보기' : '브랜드 자료 보기');
+    if (dialogKicker) dialogKicker.textContent = isAlliance ? 'SU HOSPITAL × PUNCH DAILY / NEW CHAPTER' : 'DAILY MULTI GYM / BRAND ARCHIVE';
+    const requestedIndex = activeGalleryIndexes.indexOf(Number(button.dataset.galleryOpen));
+    showArchiveImage(Math.max(0, requestedIndex));
     galleryDialog.showModal();
   });
 });
