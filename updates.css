@@ -41,6 +41,23 @@ button, a, select, input, textarea { -webkit-tap-highlight-color: transparent; }
 .identity-program-art img { object-fit: contain; }
 .identity-program-art .identity-visual-caption { font-size: 10px; }
 
+/* Four equal program tiles: one live film now, with the other panels ready for video. */
+.identity-program-grid { display: grid; grid-template-columns: repeat(4,minmax(0,1fr)); gap: 13px; }
+.identity-program-tile { position: relative; min-width: 0; aspect-ratio: 15/16; border: 1px solid #4c4540; overflow: hidden; background: #171717; }
+.identity-program-tile::after { content: ''; position: absolute; inset: 60% 0 0; background: linear-gradient(transparent,rgba(0,0,0,.66)); pointer-events: none; }
+.identity-program-tile video { display: block; width: 100%; height: 100%; object-fit: cover; background: #171717; }
+.identity-program-tag { position: absolute; z-index: 1; top: 12px; left: 12px; display: flex; align-items: baseline; gap: 8px; color: #fff; font: 800 11px var(--body); text-shadow: 0 2px 10px #000; pointer-events: none; }
+.identity-program-tag b { font: italic 800 clamp(17px,2vw,28px)/1 var(--display); }
+.identity-program-still { background-image: url('assets/programs-2026.webp'); background-repeat: no-repeat; background-size: 200% 200%; }
+.identity-program-still--fitness { background-position: right top; }
+.identity-program-still--strength { background-position: left bottom; }
+.identity-program-still--group { background-position: right bottom; }
+@media (max-width: 700px) {
+  .identity-program-grid { grid-template-columns: repeat(2,minmax(0,1fr)); gap: 8px; }
+  .identity-program-tag { top: 9px; left: 9px; gap: 6px; font-size: 9px; }
+  .identity-program-tag b { font-size: clamp(15px,4vw,23px); }
+}
+
 /* Four programs retain the supplied artwork, with readable live text. */
 .experience-grid { display: grid; grid-template-columns: repeat(4,minmax(0,1fr)); gap: 14px; }
 .experience-card { display: flex; flex-direction: column; min-width: 0; border: 1px solid #333; background: #181818; }
