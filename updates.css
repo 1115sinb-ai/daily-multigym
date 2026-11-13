@@ -84,6 +84,16 @@ button, a, select, input, textarea { -webkit-tap-highlight-color: transparent; }
 .training-film-copy > strong { display: block; margin: 30px 0 6px; font: italic 800 clamp(18px,2.4vw,33px) var(--display); }
 .training-film-copy > span { font-size: 12px; color: #b4b0a8; }
 
+
+/* Member stories: a companion film with a distinct visual rhythm. */
+.training-film-reviews { margin-top: 24px; border-color: #62463b; background: linear-gradient(128deg,#1b1410 0%,#0b0b0b 70%); }
+.training-film-reviews .training-film-copy > strong { color: #f2e3d7; }
+@media (min-width: 651px) {
+  .training-film-reviews { grid-template-columns: minmax(0,1.2fr) minmax(0,.8fr); }
+  .training-film-reviews figure { order: 2; }
+  .training-film-reviews .training-film-copy { order: 1; }
+}
+
 /* Locations: verified provided Naver destinations and clearly planned branches. */
 .locations-section { background: var(--cream); color: #111; }
 .locations-heading { display: flex; justify-content: space-between; align-items: end; gap: 35px; margin-bottom: 45px; }
