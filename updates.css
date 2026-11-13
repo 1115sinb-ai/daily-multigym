@@ -73,8 +73,8 @@ button, a, select, input, textarea { -webkit-tap-highlight-color: transparent; }
 .experience-copy a:hover { color: var(--orange); }
 .experience-copy a span { font-size: 20px; color: var(--orange); }
 .training-film { display: grid; grid-template-columns: minmax(0,.8fr) minmax(0,1.2fr); gap: clamp(32px,6vw,90px); align-items: center; margin-top: 74px; padding: 38px; border: 1px solid #3d3a36; background: #090909; scroll-margin-top: 100px; }
-.training-film figure { width: 100%; max-width: 400px; margin: 0 auto; }
-.training-film video { display: block; width: 100%; height: auto; aspect-ratio: 4/5; background: #151515; object-fit: contain; }
+.training-film figure { width: 100%; max-width: 360px; margin: 0 auto; }
+.training-film video { display: block; width: 100%; height: auto; aspect-ratio: 9/16; background: #151515; object-fit: contain; }
 .training-film figcaption { font-size: 10px; line-height: 1.7; color: #95938e; padding-top: 11px; }
 .training-film-copy { min-width: 0; }
 .training-film-copy h3 { font-size: clamp(27px,3.4vw,49px); letter-spacing: -.055em; line-height: 1.4; margin: 0 0 20px; }
