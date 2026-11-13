@@ -105,6 +105,11 @@ button, a, select, input, textarea { -webkit-tap-highlight-color: transparent; }
 .branch-actions .naver-link:hover { background: #065e2e; }
 .naver-link b { font: 900 20px 'DM Sans',sans-serif; margin-right: 1px; }
 .naver-link span { margin-left: auto; }
+.branch-opening-card { grid-column: 1 / -1; border: 2px solid #e85e26; background: linear-gradient(105deg,#fff0e2 0%,#fffdf8 76%); }
+.branch-opening-card .branch-badge { background: #d94716; }
+.branch-opening-card .branch-index { color: #f4d7c4; }
+.branch-opening-card > p strong { color: #bb4117; font-weight: 900; }
+.branch-opening-card .branch-actions { grid-template-columns: repeat(auto-fit,minmax(min(100%,300px),1fr)); max-width: 900px; }
 .coming-heading { display: flex; justify-content: space-between; align-items: center; gap: 20px; margin-top: 50px; margin-bottom: 20px; }
 .coming-heading h3 { font-size: 23px; letter-spacing: -.7px; margin: 0; }
 .coming-heading > span { font: 800 11px 'DM Sans',sans-serif; letter-spacing: .7px; color: #797065; }
